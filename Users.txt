@@ -1,7 +1,0 @@
-Role		Email			Password
-Creator		sarah@creator.com	password123
-Creator		dev@creator.com		password123
-Creator		anaya@creator.com	password123
-Brand		riya@brand.com		password123
-Talent Manager	aman@talent.com		password123
-Finance Manager	meera@finance.com	password123

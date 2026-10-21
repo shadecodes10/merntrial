@@ -7,12 +7,12 @@ import { useAuth } from '../context/AuthContext';
 // NOT real brands/campaigns — written from scratch so nothing here is
 // copied from any real product's marketing content or logos.
 const DEMO_CARDS = [
-  { title: 'Monsoon Essentials Drop', brand: 'Petal & Pine', tone: 'a' },
-  { title: 'Desk Setup Refresh', brand: 'Northline Co.', tone: 'b', badge: 'Applied' },
-  { title: 'Everyday Carry Series', brand: 'Fieldmark', tone: 'c' },
-  { title: 'Home Brew Kit Launch', brand: 'Roast & Co.', tone: 'd' },
-  { title: 'Trail Ready Collection', brand: 'Altitude', tone: 'e', badge: 'Invited' },
-  { title: 'City Commute Bikes', brand: 'Loop Cycles', tone: 'f' },
+  { title: 'Monsoon Essentials Drop', brand: 'Petal & Pine', tone: 'a', icon: '☔', budget: '₹45k' },
+  { title: 'Desk Setup Refresh', brand: 'Northline Co.', tone: 'b', badge: 'Applied', icon: '💻', budget: '₹60k' },
+  { title: 'Everyday Carry Series', brand: 'Fieldmark', tone: 'c', icon: '🎒', budget: '₹30k' },
+  { title: 'Home Brew Kit Launch', brand: 'Roast & Co.', tone: 'd', icon: '☕', budget: '₹38k' },
+  { title: 'Trail Ready Collection', brand: 'Altitude', tone: 'e', badge: 'Invited', icon: '⛰️', budget: '₹75k' },
+  { title: 'City Commute Bikes', brand: 'Loop Cycles', tone: 'f', icon: '🚲', budget: '₹52k' },
 ];
 
 function Login() {
@@ -85,7 +85,10 @@ function Login() {
           {DEMO_CARDS.map((c, i) => (
             <div className={`float-card tone-${c.tone}`} key={i}>
               {c.badge && <span className="float-badge">{c.badge}</span>}
-              <div className="float-thumb" />
+              <div className="float-thumb">
+                <span className="float-icon">{c.icon}</span>
+                <span className="float-budget">{c.budget}</span>
+              </div>
               <div className="float-title">{c.title}</div>
               <div className="float-brand">{c.brand}</div>
             </div>
